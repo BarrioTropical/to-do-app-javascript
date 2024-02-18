@@ -12,7 +12,9 @@
     --black: #000;
     --grey-light: #bfbfbf;
     --grey: #999;
+    --dark-grey: #ccc;
     --white: #FFF;
+    --light-black: #444;
 }
 
 /* body */
@@ -30,10 +32,11 @@ body{
 
 .wrapper{
     max-width: 405px;
-    background-color: var(--white);
+    background: #fff;
     margin: 137px auto;
     padding: 28px 0 30px;
-    border-radius: 10px;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* task */
@@ -66,4 +69,57 @@ body{
 
 .task-input input::placeholder{
     color: var(--grey-light);
+}
+
+/* controls */
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    display: flex;
+    padding: 18px 25px;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+/* filters */
+.filter span{
+    margin: 0 8px;
+    font-size: 17px;
+    color: var(--light-black);
+    cursor: pointer;
+}
+
+.filter span:filer-child{
+    margin-left: 0;
+}
+
+.filter span.active{
+    color: var(--black);
+}
+
+.controls .clear-btn{
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    background: #1e293b;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    transition: transform 0.25s ease;
+}
+
+.clear-btn.active{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.clear-btn:active{
+    transform: scale(0.93);
 }
