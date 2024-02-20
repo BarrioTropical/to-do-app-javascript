@@ -9,7 +9,8 @@
 }
 
 :root{
-    --black: #000;
+    --black: #141413;
+    --cream: #faf3e9;
     --grey-light: #bfbfbf;
     --grey: #999;
     --dark-grey: #ccc;
@@ -22,7 +23,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: var(--black);
+    background: var(--cream);
 }
 
 ::selection{
@@ -37,6 +38,12 @@ body{
     padding: 28px 0 30px;
     border-radius: 7px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 /* task */
@@ -109,7 +116,7 @@ body{
     font-size: 13px;
     padding: 7px 13px;
     border-radius: 4px;
-    background: #1e293b;
+    background: var(--black);
     letter-spacing: 0.3px;
     pointer-events: none;
     transition: transform 0.25s ease;
